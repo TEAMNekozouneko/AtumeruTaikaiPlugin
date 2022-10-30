@@ -1,0 +1,24 @@
+name: AtsumePlugin
+version: '${project.version}'
+main: com.nekozouneko.stream.atsumeplugin.AtsumePlugin
+api-version: 1.19
+authors: [ Taitaitatata, Nekokazoku ]
+description: 色々あつめて計測するプラグイン
+website: https://youtube.com/TeamNekozouneko
+
+commands:
+    start:
+        aliases: ["taikai-start"]
+        description: "大会を開始します。"
+        usage: "/<command> <title>"
+        permission: atsumeplugin.command.start
+    end:
+        aliases: ["taikai-end"]
+        description: "大会を終了"
+        usage: "/<command>"
+        permission: atsumeplugin.command.end
+    ranking:
+        aliases: ["taikai-ranking"]
+        description: "大会のランキングを表示"
+        usage: '/<command>'
+        permission: atsumeplugin.command.ranking

@@ -1,0 +1,47 @@
+# 計測するタイプ
+#
+# - Craft > クラフト数を計測
+# - Mine  > ブロックの破壊数を計測
+# - Place > ブロックの設置数を計測
+# - Kill  > エンティティのキル数を計測
+on: Mine
+# ブロックまたはエンティティのIDを入力
+#
+# = 例
+# - ENDER_CHEST
+# - STICK
+# - WITHER
+# - CHICKEN
+target: ["entity or block id"]
+
+leader:
+    enabled: false
+    min: 3
+
+    message: '&c%player%&rが&c%score%&r%unit%で&c%unit%リーダー&rとなりました。'
+
+    # リーダーに追加しないプレイヤー
+    exclude:
+        - 'Player id'
+
+actionbar:
+    enabled: false
+
+    # アクションバーに表示するメッセージ
+    #
+    # プレースホルダー
+    # - %player% > プレイヤー名
+    # - %unit% > 単位
+    # - %score% > 計測した数1
+    message: '現在のあなたのスコア: %score% %unit%'
+
+scoreboard:
+    enabled: false
+
+    # スコアボードを表示する位置
+    # - none      > 非表示にします。(別の表示オプションは無視されます。)
+    # - belowName > ネーム名の下に表示します。
+    # - list      > タブリストに表示
+    # - sidebar   > 右のリストに表示
+    show:
+        - sidebar
